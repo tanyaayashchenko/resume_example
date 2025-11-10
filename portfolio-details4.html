@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Детали портфолио - Анализ Use Cases</title>
+  <meta name="description" content="Анализ Use Cases для системы управления товарами маркетплейса">
+  <meta name="keywords" content="Use Cases, CRUD, User Story, управление товарами">
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <!-- Uncomment the line below if you also wish to use an text logo -->
+        <!-- <h1 class="sitename">Style</h1>  -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+
+        <div class="profile-img">
+          <img src="assets/img/profile/profile-square-1.webp" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Ященко Татьяна</h1>
+        </a>
+
+        
+
+        <ul>
+          <li><a href="#hero">Главная страница</a></li>
+         
+          <li><a href="#resume">Резюме</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Проекты</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Главная страница</a></li>
+            <li class="current">Детали портфолио</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-12" data-aos="fade-up">
+            <div class="portfolio-details-content">
+              <div class="project-meta">
+                <div class="badge-wrapper">
+                  <span class="project-badge">Системный анализ</span>
+                  <span class="project-badge">Use Cases</span>
+                  <span class="project-badge">CRUD</span>
+                </div>
+                <div class="date-client">
+                  <div class="meta-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>Июль 2025</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="bi bi-building"></i>
+                    <span>Учебный проект</span>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="project-title">Анализ Use Cases: Управление карточками товаров на маркетплейсе</h2>
+
+              <!-- User Story Card -->
+              <div class="user-story-card bg-light p-4 rounded mb-4" data-aos="fade-up">
+                <h4><i class="bi bi-person-circle me-2"></i>User Story</h4>
+                <div class="card bg-white mt-2">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>Роль:</strong> Продавец на маркетплейсе</p>
+                    <p class="mb-1"><strong>Цель:</strong> Управлять карточками товаров</p>
+                    <p class="mb-0"><strong>Результат:</strong> Поддерживать актуальную информацию о продуктах и предлагать их покупателям</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CRUD Summary -->
+              <div class="crud-summary mb-4" data-aos="fade-up">
+                <h4><i class="bi bi-diagram-3 me-2"></i>CRUD Анализ операций</h4>
+                <div class="row text-center">
+                  <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                      <span class="badge badge-create crud-badge">CREATE</span>
+                      <h5 class="mt-2">Use Case 1</h5>
+                      <p class="mb-0 small">Добавление нового товара</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                      <span class="badge badge-read crud-badge">READ</span>
+                      <h5 class="mt-2">Use Case 2</h5>
+                      <p class="mb-0 small">Просмотр данных о товаре</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                      <span class="badge badge-update crud-badge">UPDATE</span>
+                      <h5 class="mt-2">Use Case 3</h5>
+                      <p class="mb-0 small">Изменение данных о товаре</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                      <span class="badge badge-delete crud-badge">DELETE</span>
+                      <h5 class="mt-2">Use Case 4</h5>
+                      <p class="mb-0 small">Удаление товара</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Use Cases Table -->
+              <div class="use-cases-table mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-table me-2"></i>Детализация Use Cases</h4>
+                
+                <div class="table-responsive">
+                  <table class="table table-bordered use-case-table">
+                    <thead class="table-light">
+                      <tr>
+                        <th width="10%">Use Case</th>
+                        <th width="15%">Тип операции</th>
+                        <th width="25%">Основной поток</th>
+                        <th width="25%">Альтернативные потоки</th>
+                        <th width="25%">Исключения</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Use Case 1 -->
+                      <tr>
+                        <td>
+                          <strong>Use Case 1</strong><br>
+                          <small>Добавление нового товара</small>
+                        </td>
+                        <td>
+                          <span class="badge badge-create crud-badge">CREATE</span>
+                          <div class="mt-1">
+                            <small><strong>Акторы:</strong><br>Продавец, Система</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flow-step">
+                            <small>1. Продавец нажимает "Добавить новый товар"</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>2. Система отображает форму с полями</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>3. Продавец заполняет форму</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>4. Продавец нажимает "Сохранить"</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>5. Система проверяет корректность данных</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>6. Уведомление о создании товара</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="alternative-flow">
+                            <small><strong>Некорректные данные:</strong><br>
+                            • Система: "Цена должна быть больше 0"<br>
+                            • Продавец исправляет данные</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="exception-flow">
+                            <small><strong>Обязательные поля:</strong><br>
+                            • Подсветка красным<br>
+                            • Уведомление о необходимости заполнить</small>
+                          </div>
+                          <div class="exception-flow">
+                            <small><strong>Сбой системы:</strong><br>
+                            • "Ошибка добавления, попробуйте позже"</small>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <!-- Use Case 2 -->
+                      <tr>
+                        <td>
+                          <strong>Use Case 2</strong><br>
+                          <small>Просмотр данных о товаре</small>
+                        </td>
+                        <td>
+                          <span class="badge badge-read crud-badge">READ</span>
+                          <div class="mt-1">
+                            <small><strong>Акторы:</strong><br>Продавец, Система</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flow-step">
+                            <small>1. Продавец нажимает на профиль</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>2. Система отображает список товаров</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>3. Отображение кнопок управления</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>4. Продавец проверяет содержимое</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="alternative-flow">
+                            <small><strong>Нет товаров:</strong><br>
+                            • "Нет добавленных товаров"<br>
+                            • Предложение добавить товар</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="exception-flow">
+                            <small><strong>Сбой системы:</strong><br>
+                            • "Ошибка. Перезагрузите страницу"</small>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <!-- Use Case 3 -->
+                      <tr>
+                        <td>
+                          <strong>Use Case 3</strong><br>
+                          <small>Изменение данных о товаре</small>
+                        </td>
+                        <td>
+                          <span class="badge badge-update crud-badge">UPDATE</span>
+                          <div class="mt-1">
+                            <small><strong>Акторы:</strong><br>Продавец, Система</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flow-step">
+                            <small>1. Продавец заходит на страницу товаров</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>2. Нажимает "Изменить данные"</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>3. Система отображает форму с данными</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>4. Изменение количества, фото, описания</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>5. Продавец нажимает "Сохранить изменения"</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>6. Система проверяет корректность</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>7. "Изменения успешно сохранены"</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="alternative-flow">
+                            <small><strong>Изменение количества:</strong><br>
+                            • Кнопки + и - для количества<br>
+                            • Динамическое обновление</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="exception-flow">
+                            <small><strong>Обязательные поля:</strong><br>
+                            • Подсветка красным<br>
+                            • Уведомление о заполнении</small>
+                          </div>
+                          <div class="exception-flow">
+                            <small><strong>Сбой системы:</strong><br>
+                            • "Ошибка добавления, попробуйте позже"</small>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <!-- Use Case 4 -->
+                      <tr>
+                        <td>
+                          <strong>Use Case 4</strong><br>
+                          <small>Удаление товара</small>
+                        </td>
+                        <td>
+                          <span class="badge badge-delete crud-badge">DELETE</span>
+                          <div class="mt-1">
+                            <small><strong>Акторы:</strong><br>Продавец, Система</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flow-step">
+                            <small>1. Продавец заходит на страницу товаров</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>2. Нажимает "Удалить" у товара</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>3. Система запрашивает подтверждение</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>4. Продавец подтверждает удаление</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>5. Система удаляет товар</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>6. Обновление страницы</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>7. Продавец видит обновленную страницу</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="alternative-flow">
+                            <small><strong>Удаление единственного товара:</strong><br>
+                            • "Нет новых товаров"<br>
+                            • Предложение добавить товар</small>
+                          </div>
+                          <div class="alternative-flow">
+                            <small><strong>Отмена действия:</strong><br>
+                            • Сохранение страницы без изменений</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="exception-flow">
+                            <small><strong>Активные заказы:</strong><br>
+                            • "Товар не может быть удален..."<br>
+                            • "Товар будет удален позже"</small>
+                          </div>
+                          <div class="exception-flow">
+                            <small><strong>Сбой системы:</strong><br>
+                            • "Сбой системы. Повторите попытку позже"</small>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Process Visualization -->
+              <div class="process-visualization mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-diagram-3 me-2"></i>Визуализация бизнес-процесса</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card h-100">
+                      <div class="card-header bg-primary text-white">
+                        <h6 class="mb-0">Жизненный цикл товара</h6>
+                      </div>
+                      <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                          <span class="badge bg-success me-2">1</span>
+                          <span>Создание товара</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                          <span class="badge bg-info me-2">2</span>
+                          <span>Просмотр и мониторинг</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                          <span class="badge bg-warning me-2">3</span>
+                          <span>Регулярное обновление</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <span class="badge bg-danger me-2">4</span>
+                          <span>Удаление/Архивация</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card h-100">
+                      <div class="card-header bg-success text-white">
+                        <h6 class="mb-0">Поля карточки товара</h6>
+                      </div>
+                      <div class="card-body">
+                        <div class="row small">
+                          <div class="col-6">
+                            <ul class="list-unstyled">
+                              <li>✓ Название товара</li>
+                              <li>✓ Цена</li>
+                              <li>✓ Фотографии</li>
+                              <li>✓ Описание</li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="list-unstyled">
+                              <li>✓ Размеры</li>
+                              <li>✓ Размерная сетка</li>
+                              <li>✓ Количество</li>
+                              <li>✓ Статус</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Success Metrics -->
+              <div class="success-metrics" data-aos="fade-up">
+                
+                <div class="row text-center">
+                  <div class="col-md-3">
+                    <div class="border rounded p-3">
+                      <i class="bi bi-check-circle text-success fs-1"></i>
+                      <h5 class="mt-2">Успешное создание</h5>
+                      <p class="mb-0 small">Корректное добавление товара с валидацией данных</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="border rounded p-3">
+                      <i class="bi bi-eye text-info fs-1"></i>
+                      <h5 class="mt-2">Быстрый просмотр</h5>
+                      <p class="mb-0 small">Мгновенный доступ к информации о товарах</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="border rounded p-3">
+                      <i class="bi bi-arrow-clockwise text-warning fs-1"></i>
+                      <h5 class="mt-2">Легкое обновление</h5>
+                      <p class="mb-0 small">Процесс изменения данных без ошибок</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="border rounded p-3">
+                      <i class="bi bi-trash text-danger fs-1"></i>
+                      <h5 class="mt-2">Безопасное удаление</h5>
+                      <p class="mb-0 small">Контроль удаления с проверкой зависимостей</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-buttons mt-4" data-aos="fade-up">
+                
+                <a href="portfolio-details1.html" class="btn-next-project">
+                  Следующий проект <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Style</strong> <span>All Rights Reserved</span></p>
+      </div>
+     
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Детали портфолио - Power BI проект</title>
+  <meta name="description" content="Проект визуализации данных в Power BI">
+  <meta name="keywords" content="Power BI, DAX, визуализация данных, дашборд, аналитика">
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <!-- Uncomment the line below if you also wish to use an text logo -->
+        <!-- <h1 class="sitename">Style</h1>  -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+
+        <div class="profile-img">
+          <img src="assets/img/profile/profile-square-1.webp" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Ященко Татьяна</h1>
+        </a>
+
+        
+
+        <ul>
+          <li><a href="#hero">Главная страница</a></li>
+         
+          <li><a href="#resume">Резюме</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Проекты</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Главная страница</a></li>
+            <li class="current">Детали портфолио</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="portfolio-details-media">
+              <div class="main-image">
+                <div class="portfolio-details-slider swiper init-swiper" data-aos="zoom-in">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 1000,
+                      "autoplay": {
+                        "delay": 6000
+                      },
+                      "effect": "creative",
+                      "creativeEffect": {
+                        "prev": {
+                          "shadow": true,
+                          "translate": [0, 0, -400]
+                        },
+                        "next": {
+                          "translate": ["100%", 0, 0]
+                        }
+                      },
+                      "slidesPerView": 1,
+                      "navigation": {
+                        "nextEl": ".swiper-button-next",
+                        "prevEl": ".swiper-button-prev"
+                      }
+                    }
+                  </script>
+                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/leads-matrix-analysis.webp" alt="Матрица анализа отработки клиентов" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/channels-pie-chart.webp" alt="Доли каналов привлечения" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/vip-clients-donut.webp" alt="Распределение VIP и Standard клиентов" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/sales.webp" alt="Воронка продаж" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+
+              <!-- Технологии и инструменты -->
+              <div class="tech-stack-badges" data-aos="fade-up" data-aos-delay="300">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Power Query</span>
+                <span>Data Modeling</span>
+                <span>Визуализация</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="portfolio-details-content">
+              <div class="project-meta">
+                <div class="badge-wrapper">
+                  <span class="project-badge">Анализ эффективности</span>
+                  <span class="project-badge">Воронка продаж</span>
+                </div>
+                <div class="date-client">
+                  <div class="meta-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>Январь 2024</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="bi bi-building"></i>
+                    <span>Учебный проект</span>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="project-title">Анализ эффективности каналов привлечения и отработки лидов</h2>
+
+              <div class="project-overview">
+                <p class="lead">
+                  Создание комплексного дашборда для анализа воронки продаж, сегментации клиентов и оценки эффективности 
+                  каналов привлечения и работы менеджеров.
+                </p>
+
+                <div class="accordion project-accordion" id="portfolio-details-projectAccordion">
+                  
+                  <!-- Задача проекта -->
+                  <div class="accordion-item" data-aos="fade-up">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#portfolio-details-collapse-1" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="bi bi-clipboard-data me-2"></i> Задача проекта
+                      </button>
+                    </h2>
+                    <div id="portfolio-details-collapse-1" class="accordion-collapse collapse show" data-bs-parent="#portfolio-details-projectAccordion">
+                      <div class="accordion-body">
+                        <p>Разработать систему для отслеживания эффективности работы с клиентами по различным каналам привлечения.</p>
+                        <ul>
+                          <li>Загрузка и объединение данных из Excel файлов</li>
+                          <li>Классификация клиентов на VIP и Standard</li>
+            
+                          <li>Оценка каналов привлечения</li>
+                          <li>Создание интерактивных визуализаций</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Реализация -->
+                  <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portfolio-details-collapse-2" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="bi bi-gear me-2"></i> Реализация
+                      </button>
+                    </h2>
+                    <div id="portfolio-details-collapse-2" class="accordion-collapse collapse" data-bs-parent="#portfolio-details-projectAccordion">
+                      <div class="accordion-body">
+                        <h6>1. Загрузка данных и настройка модели:</h6>
+                        <ul>
+                          <li><strong>Загрузка таблиц:</strong> leads, sales_channel, products, managers, statuses, region, sales channel</li>
+                          <li><strong>Настройка связей</strong></li>
+                          <li><strong>Оптимизация:</strong> Установка правильных типов данных и отношений</li>
+                        </ul>
+                        
+                        <h6>2. Преобразования в Power Query:</h6>
+                        <ul>
+                          <li><strong>Условный столбец:</strong> Классификация клиентов на VIP/Standard</li>
+                          <li><strong>Очистка данных:</strong> Проверка на дубликаты и целостность</li>
+                          
+                        </ul>
+
+                        <h6>3. DAX-меры:</h6>
+                        <ul>
+                          <li>Меры для каждого статуса воронки продаж</li>
+                         
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Визуализации -->
+                  <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portfolio-details-collapse-3" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="bi bi-bar-chart me-2"></i> Созданные визуализации
+                      </button>
+                    </h2>
+                    <div id="portfolio-details-collapse-3" class="accordion-collapse collapse" data-bs-parent="#portfolio-details-projectAccordion">
+                      <div class="accordion-body">
+                        <h6>Матрица анализа отработки клиентов:</h6>
+                        <ul>
+                          <li><strong>Строки:</strong> Канал привлечения → Продукт → Менеджер</li>
+                          <li><strong>Значения:</strong> Всего клиентов + меры по статусам</li>
+                          
+                        </ul>
+
+                        <h6>Круговая диаграмма каналов привлечения:</h6>
+                        <ul>
+                          <li><strong>Легенда:</strong> Channel_name</li>
+                          <li><strong>Значения:</strong> Количество клиентов</li>
+                          <li><strong>Анализ:</strong> Доли эффективности каналов</li>
+                        </ul>
+
+                        <h6>Кольцевой график сегментов клиентов:</h6>
+                        <ul>
+                          <li><strong>Легенда:</strong> VIP/Standard клиенты</li>
+                          <li><strong>Значения:</strong> Распределение клиентской базы</li>
+                          <li><strong>Сегментация:</strong> Анализ ценности клиентов</li>
+                        </ul>
+                        <h6>Воронка продаж</h6>
+                       
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Результаты -->
+                  <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portfolio-details-collapse-4" aria-expanded="false" aria-controls="collapseFour">
+                        <i class="bi bi-award me-2"></i> Результаты
+                      </button>
+                    </h2>
+                    <div id="portfolio-details-collapse-4" class="accordion-collapse collapse" data-bs-parent="#portfolio-details-projectAccordion">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><strong>Объединение данных из 7 таблиц</strong> </li>
+                          
+                          
+                          <li><strong>Сегментация клиентов:</strong> Выделение VIP-клиентов для особого внимания</li>
+                          <li><strong>Визуализация воронки:</strong> Понятное отображение конверсии на каждом этапе</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Ключевые функции -->
+              <div class="project-features" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="bi bi-stars"></i> Ключевые функции дашборда</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> Матрица с  навигацией</li>
+                      <li><i class="bi bi-check2-circle"></i> Анализ по каналам привлечения</li>
+                      <li><i class="bi bi-check2-circle"></i> Сегментация VIP/Standard клиентов</li>
+                      <li><i class="bi bi-check2-circle"></i> Воронка статусов лидов</li>
+                    </ul>
+                  </div>
+                  
+                 
+
+              <!-- Примеры DAX формул -->
+              <div class="code-examples" data-aos="fade-up" data-aos-delay="400">
+                <h3><i class="bi bi-code-slash"></i> Реализованные DAX-меры</h3>
+                <div class="code-snippet">
+                  <pre><code>-- Всего клиентов
+Всего клиентов = DISTINCTCOUNT(leads[client_id])
+
+ Меры по статусам
+Согласие = CALCULATE(
+    COUNT(statuses[client_id]),
+    FILTER(statuses,statuses[status]=="Согласие"))
+
+Клиент думает = CALCULATE(
+    COUNT(statuses[client_id]),
+    FILTER(statuses, statuses[status] = "Клиент думает")
+)
+
+Недозвон = CALCULATE(
+   COUNT(statuses[client_id]),
+    FILTER(statuses, statuses[status] = "Недозвон")
+)
+
+Отказ = CALCULATE(
+    COUNT(statuses[client_id]),
+    FILTER(statuses, statuses[status] = "Отказ")
+)
+
+</code></pre>
+                </div>
+              </div>
+
+              <!-- Power Query преобразование -->
+              <div class="code-examples" data-aos="fade-up" data-aos-delay="450">
+                <h3><i class="bi bi-gear-fill"></i> Power Query: Условный столбец</h3>
+                <div class="code-snippet">
+                  <pre><code>Классификация клиентов на VIP/Standard
+= Table.AddColumn(leads, "Тип клиента", each 
+    if List.Contains({
+        3981, 3982, 3984, 4089, 3885, 
+        3699, 3501, 3473, 4154
+    }, [client_id]) 
+    then "VIP" 
+    else "Standard"
+)</code></pre>
+                </div>
+              </div>
+
+              <div class="cta-buttons" data-aos="fade-up" data-aos-delay="500">
+                <a href="assets/files/Анализ каналов привлечения лидов.pbix" class="btn-view-project" download>
+                  <i class="bi bi-download me-2"></i>Скачать Power BI файл
+                </a>
+                
+                <a href="portfolio-details3.html" class="btn-next-project">
+                  Следующий проект <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Style</strong> <span>All Rights Reserved</span></p>
+      </div>
+     
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
