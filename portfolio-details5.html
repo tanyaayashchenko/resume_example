@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Детали портфолио - Power BI проект</title>
+  <meta name="description" content="Проект визуализации данных в Power BI">
+  <meta name="keywords" content="Power BI, DAX, визуализация данных, дашборд, аналитика">
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <!-- Uncomment the line below if you also wish to use an text logo -->
+        <!-- <h1 class="sitename">Style</h1>  -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+
+        <div class="profile-img">
+          <img src="assets/img/profile/profile-square-1.webp" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Ященко Татьяна</h1>
+        </a>
+
+        
+
+        <ul>
+          <li><a href="#hero">Главная страница</a></li>
+         
+          <li><a href="#resume">Резюме</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Проекты</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Главная страница</a></li>
+            <li class="current">Детали портфолио</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+     <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="portfolio-details-media">
+              <div class="main-image">
+                <div class="portfolio-details-slider swiper init-swiper" data-aos="zoom-in">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 1000,
+                      "autoplay": {
+                        "delay": 6000
+                      },
+                      "effect": "creative",
+                      "creativeEffect": {
+                        "prev": {
+                          "shadow": true,
+                          "translate": [0, 0, -400]
+                        },
+                        "next": {
+                          "translate": ["100%", 0, 0]
+                        }
+                      },
+                      "slidesPerView": 1,
+                      "navigation": {
+                        "nextEl": ".swiper-button-next",
+                        "prevEl": ".swiper-button-prev"
+                      }
+                    }
+                  </script>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/proj_all.webp"  class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/proj2.webp" alt="Подпроцесс обработки платежа" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/proj3.webp" alt="Детальный вид диаграммы" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+
+              <!-- Технологии и инструменты -->
+              <div class="tech-stack-badges" data-aos="fade-up" data-aos-delay="300">
+                <span>Data Analysis</span>
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="portfolio-details-content">
+              <div class="project-meta">
+                <div class="badge-wrapper">
+                  
+                  <span class="project-badge">Бизнес-анализ</span>
+                  
+                </div>
+                <div class="date-client">
+                  <div class="meta-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>Сентябрь 2025</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="bi bi-building"></i>
+                    <span>Учебный проект</span>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="project-title">Полный цикл анализа данных: Python → SQL → Power BI Dashboards</h2>
+
+              <div class="project-overview">
+                <p class="lead">
+                 Комплексный анализ данных супермаркета с полным циклом обработки данных: от подготовки и очистки в Python до визуализации в Power BI через промежуточную обработку в SQL.
+                </p>
+
+              <!-- Project Overview -->
+              <div class="project-overview bg-light p-4 rounded mb-4" data-aos="fade-up">
+                <h4><i class="bi bi-info-circle me-2"></i>Обзор проекта</h4>
+                <div class="card bg-white mt-2">
+                  <div class="card-body">
+                    
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p class="mb-1"><strong>Источник данных:</strong> Kaggle Superstore Dataset</p>
+                        <p class="mb-1"><strong>Объем данных:</strong> 9,994 записи о продажах</p>
+                      </div>
+                      <div class="col-md-6">
+                        <p class="mb-1"><strong>Период:</strong> 2014-2017 годы</p>
+                        <p class="mb-0"><strong>География:</strong> США</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technology Stack -->
+              <div class="tech-stack mb-4" data-aos="fade-up">
+                <h4><i class="bi bi-tools me-2"></i>Технологический стек</h4>
+                <div class="row text-center">
+                  <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                      <i class="bi bi-file-code text-primary fs-1"></i>
+                      <h5 class="mt-2">Python</h5>
+                      <p class="mb-0 small">Pandas для подготовки данных</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                      <i class="bi bi-database text-success fs-1"></i>
+                      <h5 class="mt-2">SQL</h5>
+                      <p class="mb-0 small">Агрегация и объединение таблиц</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                      <i class="bi bi-bar-chart text-warning fs-1"></i>
+                      <h5 class="mt-2">Power BI</h5>
+                      <p class="mb-0 small">Визуализация и дашборды</p>
+                    </div>
+                  </div>
+                  
+                  </div>
+                </div>
+              </div>
+
+              <!-- Data Processing Pipeline -->
+              <div class="pipeline mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-diagram-3 me-2"></i>Процесс обработки данных</h4>
+                
+                <div class="table-responsive">
+                  <table class="table table-bordered pipeline-table">
+                    <thead class="table-light">
+                      <tr>
+                        <th width="20%">Этап</th>
+                        <th width="40%">Действия</th>
+                        <th width="40%">Результат</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Stage 1 -->
+                      <tr>
+                        <td>
+                          <strong>1. Подготовка данных</strong><br>
+                          <small>Python + Pandas</small>
+                        </td>
+                        <td>
+                          <div class="flow-step">
+                            <small>• Загрузка исходного CSV файла</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>• Разделение на 3 нормализованные таблицы</small>
+                          </div>
+                        
+                          <div class="flow-step">
+                            <small>• Форматирование дат и категоризация скидок</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="result-item">
+                            <small><strong>Созданы таблицы:</strong><br>
+                            • Product_Data_Full.csv<br>
+                            • Product_Sales_Full.csv<br>
+                            • Discount_Data_Full.csv</small>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <!-- Stage 2 -->
+                      <tr>
+                        <td>
+                          <strong>2. SQL обработка</strong><br>
+                          <small>Microsoft SQL Server</small>
+                        </td>
+                        <td>
+                          <div class="flow-step">
+                            <small>• Импорт CSV в базу данных</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>• Объединение таблиц через JOIN</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>• Расчет метрик (Revenue, Total Cost)</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>• Извлечение месяца и года на английском</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="result-item">
+                            <small><strong>CTE запрос с:</strong><br>
+                            • Объединенными данными<br>
+                            • Расчетными полями<br>
+                            • Английскими названиями месяцев</small>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <!-- Stage 3 -->
+                      <tr>
+                        <td>
+                          <strong>3. Визуализация</strong><br>
+                          <small>Power BI</small>
+                        </td>
+                        <td>
+                          <div class="flow-step">
+                            <small>• Импорт данных из SQL</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>• Создание расчетных столбцов (Profit)</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>• Разработка интерактивных дашбордов</small>
+                          </div>
+                          <div class="flow-step">
+                            <small>• Создание динамических кнопок с фильтрами по годам</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="result-item">
+                            <small><strong>Интерактивный дашборд:</strong><br>
+                            • Динамические графики<br>
+                            • Фильтры по периодам<br>
+                            • Воронка по категориям товаров<br>
+                            • KPI панели Общая выручка и Средний чек</small>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              
+<div class="sql-query mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-code-slash me-2"></i>Ключевой SQL запрос</h4>
+                <div class="card">
+                  <div class="card-header bg-dark text-white">
+                    <small>CTE для объединения данных и расчета метрик</small>
+                  </div>
+                  <div class="card-body">
+                    <pre class="bg-light p-3 rounded small"><code>with cte as(
+select 
+    a.Product,
+    a.Category,
+    a.Brand,
+    a.Description,
+    a.Sub_Category,
+    a.Sale_Price,
+    a.Cost_Price,
+    b.Date,
+    b.Customer_Type,
+    b.Country,
+    b.Discount_Band,
+    b.Units_Sold,
+    b.Discount,
+    (Sale_Price * Units_Sold) as revenue,
+    (Cost_Price * Units_Sold) as total_cost,
+    FORMAT(Date, 'MMMM', 'en-US') as month,
+    FORMAT(Date, 'yyyy') as year
+from Product_Data_Full a
+join Product_Sales_Full b on a.Product_ID = b.Product
+)
+select *,
+    (1 - a.Discount * 1.0 / 100) * a.revenue as discount_revenue
+from cte a
+join Discount_Data_Full b 
+    on a.Discount_Band = b.Discount_Band 
+    and a.month = b.Month</code></pre>
+                  </div>
+                </div>
+              </div>
+              
+<!-- Key Python Query -->
+              <div class="sql-query mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-code-slash me-2"></i>Python код </h4>
+                <div class="card">
+                  <div class="card-header bg-dark text-white">
+                    <small>Разделение и форматирование данных</small>
+                  </div>
+                  <div class="card-body">
+                    <pre class="bg-light p-3 rounded small"><code>import pandas as pd
+
+# Загрузка исходных данных
+df = pd.read_csv('Sample - Superstore.csv')
+
+# 1. Product Data
+product_data = df[['Product ID', 'Product Name', 'Category', 'Sub-Category']].drop_duplicates()
+# Добавляем недостающие колонки с расчетными данными
+product_data['Cost Price'] = (df.groupby('Product ID')['Sales'].transform('mean') * 0.7).round().astype(int)
+product_data['Sale Price'] = df.groupby('Product ID')['Sales'].transform('mean').round().astype(int)
+product_data['Brand'] = df['Product Name'].str.split().str[0]  
+product_data['Description'] = '"' + df['Product Name'] + '"'
+product_data['Cost Price'] = '$' + product_data['Cost Price'].astype(str)
+product_data['Sale Price'] = '$' + product_data['Sale Price'].astype(str)
+product_data = product_data.rename(columns={'Product Name': 'Product'})
+product_data.to_csv('Product_Data_Full.csv', index=False)
+# 2. Product Sales 
+product_sales = df[['Order Date', 'Segment', 'Country', 'Product ID', 'Discount', 'Quantity']].copy()
+
+product_sales['Order Date'] = pd.to_datetime(product_sales['Order Date'])
+
+product_sales['Order Date'] = product_sales['Order Date'].apply(
+    lambda x: f"1/{x.month}/{x.year}"
+)
+
+product_sales['Discount Band'] = pd.cut(df['Discount'], 
+                                     bins=[-0.1, 0, 0.15, 0.25, 1], 
+                                     labels=['None', 'Low', 'Medium', 'High'])
+product_sales = product_sales.rename(columns={
+    'Order Date': 'Date',
+    'Segment': 'Customer Type', 
+    'Product ID': 'Product', 
+    'Quantity': 'Units Sold'
+})
+product_sales.to_csv('Product_Sales_Full.csv', index=False)
+
+# 3. Discount Data
+months = ['January', 'February', 'March', 'April', 'May', 'June', 
+          'July', 'August', 'September', 'October', 'November', 'December']
+
+discount_bands = ['None', 'Low', 'Medium', 'High']
+
+# Создаем все комбинации месяцев и дисконтных бэндов
+discount_data = []
+for month in months:
+    for band in discount_bands:
+        discount_data.append({'Month': month, 'Discount Band': band})
+
+discount_df = pd.DataFrame(discount_data)
+
+# Добавляем значения скидок 
+discount_values = [0,5,8,12,0,6,9,14,0,4,7,11,0,5,10,16,0,7,12,18,
+                   0,6,8,13,0,8,14,21,0,7,11,17,0,5,9,15,0,9,15,22,
+                   0,10,16,24,0,12,20,28]
+
+discount_df['Discount'] = discount_values
+discount_df.to_csv('Discount_Data_Full.csv', index=False)</code></pre>
+                  </div>
+                </div>
+              </div>
+              <!-- Key Metrics -->
+              <div class="key-metrics mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-graph-up me-2"></i>Ключевые метрики анализа</h4>
+                <div class="row text-center">
+                  <div class="col-md-3">
+                    <div class="border rounded p-3">
+                      <i class="bi bi-currency-dollar text-success fs-1"></i>
+                      <h5 class="mt-2">Revenue</h5>
+                      <p class="mb-0 small">Общая выручка от продаж</p>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-3">
+                    <div class="border rounded p-3">
+                      <i class="bi bi-percent text-warning fs-1"></i>
+                      <h5 class="mt-2">Discount Impact</h5>
+                      <p class="mb-0 small">Влияние скидок на выручку</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="border rounded p-3">
+                      <i class="bi bi-graph-up-arrow text-info fs-1"></i>
+                      <h5 class="mt-2">Profit</h5>
+                      <p class="mb-0 small">Расчетная прибыль</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Business Insights -->
+              <div class="insights mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-lightbulb me-2"></i>Бизнес-инсайты</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card h-100">
+                      <div class="card-header bg-info text-white">
+                        <h6 class="mb-0">Анализ продаж</h6>
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-unstyled">
+                          <li class="mb-2">✓ Сезонность продаж по месяцам</li>
+                          <li class="mb-2">✓ Эффективность различных скидочных программ</li>
+                          <li class="mb-2">✓ Популярность товаров по категориям</li>
+                         
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <!-- Visualization Preview -->
+              <div class="visualization-preview mb-4" data-aos="fade-up">
+                <h4 class="mb-3"><i class="bi bi-bar-chart me-2"></i>Визуализация в Power BI</h4>
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p class="text-muted mb-3">Интерактивный дашборд включает:</p>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="p-2">
+                          <i class="bi bi-pie-chart text-primary fs-4"></i>
+                          <p class="mb-0 small">Круговые диаграммы выручки по группам скидок</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="p-2">
+                          <i class="bi bi-graph-up text-success fs-4"></i>
+                          <p class="mb-0 small">Тренды продаж по месяцам</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="p-2">
+                          <i class="bi bi-map text-warning fs-4"></i>
+                          <p class="mb-0 small">Воронку по категориям товаров</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-buttons" data-aos="fade-up" data-aos-delay="500">
+                <a href="assets/files/Анализ продаж.pbix" class="btn-view-project" download>
+                  <i class="bi bi-download me-2"></i>Скачать Power BI файл
+                </a>
+                  
+                  <a href="portfolio-details1.html" class="btn-next-project">
+                    Следующий проект <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Style</strong> <span>All Rights Reserved</span></p>
+      </div>
+     
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
